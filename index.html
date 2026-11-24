@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2a0f45">
+  <title>Kululu | קולולו – רשימת מוזמנים, אישורי הגעה והושבה לחתונה</title>
+  <meta name="description" content="Kululu (קולולו) – אפליקציה חינמית, קלה ונוחה לניהול רשימת מוזמנים, אישורי הגעה וסידורי הושבה לחתונה ולאירועים מבית TgSofts.">
+  <meta name="keywords" content="Kululu, קולולו, רשימת מוזמנים, סידורי הושבה, הושבה לחתונה, אישורי הגעה, ניהול אירוע, ניהול חתונה, TgSofts">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tzion-gvili.github.io/Kululu/">
+
+  <!-- Open Graph / WhatsApp & Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tzion-gvili.github.io/Kululu/">
+  <meta property="og:title" content="Kululu | קולולו – רשימת מוזמנים והושבה לארועים">
+  <meta property="og:description" content="מנהלים את השמחה בכיף! רשימת מוזמנים, אישורי הגעה וסידורי הושבה חכמים בחינם מבית TgSofts.">
+  <meta property="og:locale" content="he_IL">
+
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kululu - קולולו",
+    "alternateName": ["קולולו", "Kululu"],
+    "url": "https://tzion-gvili.github.io/Kululu/",
+    "description": "אפליקציה חינמית לניהול רשימת מוזמנים, אישורי הגעה וסידורי הושבה לחתונה ולאירועים.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "All",
+    "inLanguage": ["he", "en"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "ILS"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "TgSofts"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&family=Suez+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=7">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-hearts" id="bgHearts" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button id="homeBtn" class="brand" title="לדף הראשי">
+      <span class="brand-bolt">💍</span>
+      <span class="brand-name">קולולו</span>
+      <small id="brandSub">רשימת מוזמנים והושבה</small>
+    </button>
+    <div class="top-actions">
+      <div class="cloud-chip hidden" id="cloudChip"></div>
+      <div class="star-total hidden" id="countChip" title="כמה אנשים מגיעים (בלי ה&quot;לא מגיע&quot;)">👥 <span id="headCount">0</span></div>
+      <button id="muteBtn" class="icon-btn" title="צליל">🔊</button>
+      <button id="logoutBtn" class="icon-btn hidden" title="יציאה">🚪</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <section class="ad-zone" aria-label="פרסומות">
+    <div class="ad-label">📣 פרסומת</div>
+    <div class="ad-card" id="adCard" aria-live="polite"></div>
+    <div class="ad-progress"><i id="adBar"></i></div>
+    <div class="ad-dots" id="adDots"></div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="ltr">Kululu · TgSofts</span> · <a class="ltr" href="tel:0525914007">0525914007</a>
+  </footer>
+
+  <canvas id="fx"></canvas>
+  <div id="toast" class="toast"></div>
+  <div id="modal" class="modal hidden"><div class="modal-card" id="modalCard"></div></div>
+
+  <script src="firebase-config.js?v=1"></script>
+  <script src="core.js?v=3"></script>
+  <script src="store.js?v=10"></script>
+  <script src="seating.js?v=4"></script>
+  <script src="app.js?v=12"></script>
+  <script>App.start();</script>
+</body>
+</html>
